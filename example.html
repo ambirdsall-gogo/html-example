@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>HTML is cool</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-item">Home</span>
+      <a class="nav-item" href="./other-page.html">About</a>
+    </nav>
+
+    <p>
+      This is the first paragraph.
+    </p>
+
+    <p>
+      This is a list of <span class="emphasis">things</span> I like:
+    </p>
+
+    <ul>
+      <li>dogs</li>
+      <li>cats</li>
+      <li>birds</li>
+    </ul>
+
+    <button type="button" id="fancy-button" onclick="alert('you can add any javascript code you want in here!')">Click me</button>
+    <!-- but for all but the very simplest things, I recommend putting js code in a <script> tag! Script
+         tags can either directly contain code, or load it from a separate file using a src
+         attribute (just like style tags!). For example:
+
+         <script>
+           let button = document.getElementById("fancy-button")
+           button.textContent = "now I say something else!"
+           button.onclick = function() { alert("oh snap") }
+         </script>
+         <script src="./my-code.js"></script>
+    -->
+
+    <div>
+      <h3>Coin Flip</h3>
+      <p id="results" class="results"></p>
+    </div>
+
+    <style>
+     .results {
+       background-color: grey;
+       padding: 20px;
+       border-radius: 10px;
+     }
+
+     .red {
+       background-color: red;
+     }
+
+    </style>
+    <button id="toggle">toggle background color of results</button>
+    <script>
+     let coinFlip = ''
+
+     if (Math.random() > 0.5) {
+       coinFlip = 'heads'
+     } else {
+       coinFlip = 'tails'
+     }
+
+     const results = document.getElementById('results')
+     results.innerText = coinFlip
+
+     const toggle = document.getElementById('toggle')
+
+     toggle.onclick = function() {
+       if (results.classList.contains('red')) {
+         results.classList.remove('red')
+       } else {
+         results.classList.add('red')
+       }
+     }
+    </script>
+
+    <p>
+      This is the second paragraph, which introduces a video. Here's the video:
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-5wpm-gesOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div>here is div one</div>
+    <div>here is div two</div>
+    <span>here is span one</span>
+    <span class="emphasis">here is span two</span>
+
+    <footer class="footer">
+      copyright me, this year<br/>
+
+      <!-- clicking a link with a "mailto:" href like this one will automatically start an email to
+      the linked address. Great for a "contact me" page! -->
+      <a href="mailto:ambirdsall@gmail.com">Contact me</a>
+    </footer>
+  </body>
+</html>

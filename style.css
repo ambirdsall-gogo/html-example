@@ -1,0 +1,63 @@
+/*
+ * Make the default background color and remove the default margin from the body (so that the navbar
+ * can go all the way to the edge of the screen)
+ */
+body {
+    background-color: antiquewhite;
+    font-family: "San Francisco", Helvetica, sans-serif;
+    margin: 0;
+
+    /* This makes sure the page fills the whole screen so that the footer isn't floating above some
+     * empty space... */
+    position: relative;
+    min-height: 100vh;
+
+    /* ...and giving a padding-bottom value that's the same as the footer's height ensures the
+     * footer won't overlap with other things and cover up any of your page's content!  */
+    padding-bottom: 4em;
+}
+
+/*
+ * restore the original margin for these: in a real project, you might want to use something like a
+ * <main> tag or a <div class="container"> instead, so you can define the margin in only one place,
+ * no matter how many different kinds of tag you have in your document.
+ */
+p, ul {
+    margin: 8px;
+}
+
+li {
+    font-family: serif;
+}
+
+.emphasis {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.navbar {
+    background-color: #cccccc;
+    padding: 1.5em;
+    border-bottom: 1px solid black;
+}
+
+.nav-item {
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: steelblue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+footer {
+    background-color: #cccccc;
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+
+    /* Put that footer at the bottom, where it belongs! */
+    position: absolute;
+    bottom: 0;
+    height: 4em;
+}
